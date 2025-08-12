@@ -28,9 +28,9 @@ Notice that the browser only offers Alice's certificate: Bob's certificate is no
 You can circumvent this by using cURL to call the authenticate endpoint. Note the `--insecure` option: we need this to make cURL accept our Demo CA server certificate.
 
 ```sh
-$ curl --insecure --cert alice.pfx --cert-type p12 https://localhost:9999/authenticate
+$ curl --insecure --cert alice.p12 --cert-type p12 https://localhost:9999/authenticate
 Hello Alice, your certificate was issued by Demo CA!
-$ curl --insecure --cert bob.pfx --cert-type p12 https://localhost:9999/authenticate
+$ curl --insecure --cert bob.p12 --cert-type p12 https://localhost:9999/authenticate
 Sorry Bob, certificates from Bob are not welcome here.
 ```
 
